@@ -2,9 +2,24 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello, World!");
+            int total = 100;
+            
+            if (GetDiscount(total))
+            {
+                Console.WriteLine("Yay rabatt :D");
+            }
+            else
+            {
+                Console.WriteLine("Ingen rabatt >:(");
+            }
+                
+        }
+
+        static bool GetDiscount(int total)
+        {
+            return total >= 1000;
         }
     }
 }
